@@ -1,0 +1,301 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none; 
+    color: inherit;
+}
+img{
+    max-width: 100%;
+    vertical-align: top;
+}
+table{
+    border-collapse: collapse;
+}
+button{
+    cursor: pointer;
+}
+body{
+    background: #fff;
+    color: #333;
+}
+
+/* 전체 감싸고 있음 */
+#wrap{
+    width: 1200px;
+    height: 500px;;
+    margin: auto;
+    position: relative;
+}
+
+/* 헤더 */
+.header{
+    width: 100%;
+    height: 100px;
+    background: #eee;
+    position: relative;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+.nav{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    z-index: 10;
+}
+.nav>ul{
+    display: flex;
+}
+.nav>ul>li{
+    text-align: center;
+}
+.nav>ul>li>a{
+    display: block;
+    font-weight: bold;
+    background-color: gray;
+    padding: 10px 30px;
+}
+.nav>ul>li>a:hover,
+.nav>ul>li>a:focus,
+.nav>ul>li:hover>a{
+    background: black;
+    color: white;
+}
+.sub{
+    background: #d3d3d3;
+    display: none;
+}
+.sub>li:hover,
+.sub>li>a:focus{
+    background: rgb(95, 95, 95);
+}
+
+/* 슬라이드 */
+.slide{
+    width: 100%;
+    height: 300px;
+    background: gray;
+    position: relative;
+    overflow: hidden;
+}
+.slide ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 900px;
+}
+.slide ul li{
+    width: 1200px;
+    height: 300px;
+    position: relative;
+}
+.slide ul li a{
+    display: block;
+    height: 100%;
+}
+.slide ul li.s1{
+    background: url(../img/img1.jpg) no-repeat center/cover;
+}
+.slide ul li.s2{
+    background: url(../img/img2.jpg) no-repeat center/cover;
+}
+.slide ul li.s3{
+    background: url(../img/img3.jpg) no-repeat center/cover;
+}
+.slide ul li a h2{
+    background: rgb(249, 201, 182, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 28px;
+}
+
+/* 컨텐츠 */
+.contents{
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+.contents>div{
+    width: 400px;
+}
+.contents>div:nth-child(2){
+    background: #fff;
+}
+
+.con1{
+    position: relative;
+}
+.con1 .tabmenu{
+    display: flex;
+}
+.con1 .tabmenu>li{
+    width: 150px;
+}
+.con1 .tabmenu>li.on{
+    background: lightsalmon;
+}
+.con1 .tabmenu>li>h2>a{
+    display: block;
+    padding: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+.con1 .tabcon{  /*.tabcon 부분은 겹쳐져있어야함*/
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: lightsalmon;
+}
+
+.notice{
+    padding-top: 10px;
+}
+.notice th{
+    text-align: left;
+}
+.notice tr{
+    border-bottom: 1px dashed black;
+}
+.notice a{
+    padding: 5px;
+    display: block;
+    width: 250px;
+    white-space: nowrap;    /*줄바꿈 안되게 하기*/
+    overflow: hidden;       /*칸 넘치는 부분은 안보이게 하기*/
+    text-overflow: ellipsis;    /*넘치는 부분은 말줄임표 ...으로 보이게 하기*/
+}
+
+.gall{
+    padding-top: 10px;
+    display: none;
+}
+.gall ul{
+    display: flex;
+    gap: 10px;
+}
+.gall ul li a img{
+    width: 126px;
+}
+
+.con2{
+    padding: 10px;
+}
+.con2 a{
+    display: block;
+    height: 100%;
+    background: url(../img/banner.jpg) center/cover;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+.con2 h2{
+    margin: 10px;
+}
+.con2 li{
+    font-weight: bold;
+    font-size: 17px;
+}
+.con2 p{
+    background: #333;
+    display: inline-block;
+    color: #fff;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.con3{
+    padding: 10px;
+}
+.con3 h2{
+    color: lightsalmon;
+    margin-bottom: 20px;
+}
+.con3 ul{
+    display: flex;
+    text-align: center;
+    gap: 30px;
+    justify-content: center;
+}
+.con3 ul li a{
+    display: block;
+    height: 100%;
+}
+.con3 ul li p{
+    width: 80px;
+    height: 80px;
+}
+.con3 ul li p img{
+    border-radius: 20px;
+}
+.con3 ul li span{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* 푸터 */
+.footer{
+    width: 100%;
+    height: 100px;
+    background: #eee;
+    position: relative;
+    padding-top: 25px;
+    padding-left: 20px;
+    display: flex;
+    gap: 30px;
+}
+.fsns{
+    display: flex;
+    gap: 10px;
+    position: absolute;    /*공중에 띄우기*/
+    top: 25px;
+    right: 20px;
+}
+.fsns li a img{
+    border-radius: 50%;
+}
+
+/* 팝업(공중에 떠야함) */
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    width: 600px;
+    background: #fff;
+    z-index: 999;   /*제일 위에 있어야 함*/
+    display: none;
+}
+.popup h2{
+    margin-bottom: 20px;
+}
+.popup .text{
+    margin: 20px 0;
+}
+.popup .button{
+    text-align: right;
+}
+.popup button{
+    border: 0;
+    padding: 15px;
+    border-radius: 10px;
+}
+.popup button:hover{
+    background: black;
+    color: #fff;
+}
