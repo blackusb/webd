@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fff;
+    color: #333;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 랩 */
+#wrap{
+    width: 1000px;
+    height: 650px;
+    background: #eee;
+    margin: auto;
+    display: flex;
+}
+
+/* 헤더 */
+.header{
+    width: 200px;
+    height: 650px;
+}
+.header .logo{
+    width: 200px;
+    height: 40px;
+    background: lightsalmon;
+}
+.nav{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.nav>ul>li>a{
+    width: 120px;
+    display: block;
+    padding: 5px 10px;
+    background: #ccc;
+    text-align: center;
+    font-weight: bold;
+}
+.nav>ul>li:hover>a,
+.nav>ul>li>a:focus{
+    background: navy;
+    color: #fff;
+}
+
+
+.nav{
+    position: relative;
+}
+.sub{
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: none;
+}
+.sub>li>a{
+    display: block;
+    width: 120px;
+    padding: 5px;
+    background: lightblue;
+    font-size: 14px;
+    text-align: center;
+}
+.sub>li>a:hover{
+    background: navy;
+    color: #fff;
+}
+
+
+/* 내용 전체 감싸고 있음 */
+.contents{
+    width: 800px;
+    height: 650px;
+    background: #ccc;
+}
